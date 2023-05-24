@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{9ad1de1d-8d3b-4328-853b-7c27b03ebbcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{eebb34a3-0fb1-4009-84d5-cfb0d4a381c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shapes">
+      <UniqueIdentifier>{291d8e6d-1d4b-49a7-a495-e5d9d19a6e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{09bf89ab-2fe1-48e2-8713-1d4a8a32565a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{ff5e4f5d-5130-477a-97c2-f9ec4252048d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Emitters">
+      <UniqueIdentifier>{58bfd37a-4a87-40fc-8740-2c8c3d6d888e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Joints">
+      <UniqueIdentifier>{5aa21541-df61-4e9a-bd9d-15861456f040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Graphics.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Input.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Time.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitters\AreaEmitter.cpp">
+      <Filter>Emitters</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitters\DragEmitter.cpp">
+      <Filter>Emitters</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitters\ForceEmitter.cpp">
+      <Filter>Emitters</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitters\GravitationalEmitter.cpp">
+      <Filter>Emitters</Filter>
+    </ClCompile>
+    <ClCompile Include="Emitters\PointEmitter.cpp">
+      <Filter>Emitters</Filter>
+    </ClCompile>
+    <ClCompile Include="Joints\Joint.cpp">
+      <Filter>Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Primitives.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Body.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\World.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\CircleShape.cpp">
+      <Filter>Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ForceTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\JointTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ParticleTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Test.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\RectShape.cpp">
+      <Filter>Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\ShapeTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Graphics.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Input.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Time.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitters\AreaEmitter.h">
+      <Filter>Emitters</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitters\DragEmitter.h">
+      <Filter>Emitters</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitters\ForceEmitter.h">
+      <Filter>Emitters</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitters\GravitationalEmitter.h">
+      <Filter>Emitters</Filter>
+    </ClInclude>
+    <ClInclude Include="Emitters\PointEmitter.h">
+      <Filter>Emitters</Filter>
+    </ClInclude>
+    <ClInclude Include="Joints\Joint.h">
+      <Filter>Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Integrator.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Primitives.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Random.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Body.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\World.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\CircleShape.h">
+      <Filter>Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\RectShape.h">
+      <Filter>Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Shape.h">
+      <Filter>Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ForceTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\JointTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ParticleTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\Test.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\ShapeTest.h">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Collision.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
