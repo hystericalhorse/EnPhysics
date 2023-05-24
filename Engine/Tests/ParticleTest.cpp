@@ -17,7 +17,7 @@ void ParticleTest::Update()
 
 		auto body = new Body(
 			m_graphics->ScreenToWorld(m_input->GetMousePosition()),
-			new CircleShape(randomf(5, 10), { randomf(), randomf(), randomf(), 1 }),
+			new CircleShape(randomf(100, 200), { randomf(), randomf(), randomf(), 1 }),
 			velocity, randomf(1, 10)
 		);
 

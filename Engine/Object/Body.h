@@ -12,7 +12,7 @@ public:
 	Body(const glm::vec2& position = { 0, 0 }, Shape* shape = nullptr, const glm::vec2& velocity = { 0, 0 }, float mass = 1.0f, Type type = Type::Dynamic, float damping = 0.0f)
 		: mass{ mass }, shape{ shape }, position { position }, velocity{ velocity }, type{ type }, damping{ damping }
 	{
-		imass = (mass == 0) ? 0 : 1 / mass;
+		imass = (mass == 0 || type != Dynamic) ? 0 : 1 / mass;
 	}
 
 	void Step(float deltaTime);

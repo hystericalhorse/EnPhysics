@@ -8,8 +8,6 @@
 
 #define POINT_FORCE
 
-#define SCREEN_CENTER {m_width * 0.5f, m_height * 0.5f}
-
 void ForceTest::Render()
 {
 	m_graphics->DrawCircle(m_input->GetMousePosition(), 20, { 1, 1, 1, 1 });

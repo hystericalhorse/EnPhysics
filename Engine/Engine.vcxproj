@@ -30,10 +30,12 @@
     <ClCompile Include="Joints\Joint.cpp" />
     <ClCompile Include="Math\Primitives.cpp" />
     <ClCompile Include="Object\Body.cpp" />
+    <ClCompile Include="Object\Collision.cpp" />
     <ClCompile Include="Object\World.cpp" />
     <ClCompile Include="Shapes\CircleShape.cpp" />
     <ClCompile Include="Shapes\RectShape.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Tests\CollisionTest.cpp" />
     <ClCompile Include="Tests\ForceTest.cpp" />
     <ClCompile Include="Tests\JointTest.cpp" />
     <ClCompile Include="Tests\ParticleTest.cpp" />
@@ -59,6 +61,7 @@
     <ClInclude Include="Shapes\CircleShape.h" />
     <ClInclude Include="Shapes\RectShape.h" />
     <ClInclude Include="Shapes\Shape.h" />
+    <ClInclude Include="Tests\CollisionTest.h" />
     <ClInclude Include="Tests\ForceTest.h" />
     <ClInclude Include="Tests\JointTest.h" />
     <ClInclude Include="Tests\ParticleTest.h" />

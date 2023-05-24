@@ -40,3 +40,5 @@ protected:
 
 	World* m_world{ nullptr };
 };
+
+#define SCREEN_CENTER {m_width * 0.5f, m_height * 0.5f}

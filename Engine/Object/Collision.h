@@ -1,26 +1,22 @@
 #pragma once
-#include "glm.hpp"
+#include <glm.hpp>
+#include "Body.h"
 #include <vector>
 
 struct Contact
 {
-	class Body* b{ nullptr };
-	class Body* B{ nullptr };
+	Body* b{ nullptr };
+	Body* B{ nullptr };
 
 	float restitution{ 0.0f };
 	float depth{ 0.0f };
 	glm::vec2 normal{ 0.0f, 0.0f };
 };
 
-class Collision
+namespace Collision
 {
-public:
-	Collision() {}
-	~Collision() {}
+	void CreateContacts(std::vector<Body*> bodies, std::vector<Contact>& contacts);
+	Contact GetContact(Body* b, Body* B);
 
-
-
-private:
-
-
+	void Separate(std::vector<Contact>& contacts);
 };
