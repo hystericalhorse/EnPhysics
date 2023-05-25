@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Tests/Test.h"
 #include "Tests/ParticleTest.h"
 #include "Tests/ForceTest.h"
 #include "Tests/JointTest.h"

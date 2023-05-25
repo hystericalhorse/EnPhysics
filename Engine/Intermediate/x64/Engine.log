@@ -1,5 +1,4 @@
-﻿  Collision.cpp
-C:\Users\edixon\C++ Projects\EnPhysics\Engine\Object\Collision.cpp(23,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  CollisionTest.cpp
   Engine.vcxproj -> C:\Users\edixon\C++ Projects\EnPhysics\Engine\Build\x64\Engine.exe
   C:\Users\edixon\C++ Projects\EnPhysics\Engine\ThirdParty\SDL2\lib\x64\SDL2.dll
   1 File(s) copied

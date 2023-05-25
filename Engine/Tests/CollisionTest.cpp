@@ -1,6 +1,7 @@
 #include "CollisionTest.h"
-#include "Object/Collision.h"
+#include "Object\Collision.h"
 #include "Shapes\CircleShape.h"
+#include "Shapes\RectShape.h"
 
 Body* mouse;
 
@@ -14,6 +15,7 @@ void CollisionTest::Update()
 {
 	Test::Update();
 
+	mouse->velocity = mouse->position - m_graphics->ScreenToWorld(m_input->GetMousePosition());
 	mouse->position = m_graphics->ScreenToWorld(m_input->GetMousePosition());
 
 	if (m_input->GetMouseButtonDown(0))
@@ -23,11 +25,12 @@ void CollisionTest::Update()
 		auto body = new Body(
 			m_graphics->ScreenToWorld(m_input->GetMousePosition()),
 			new CircleShape(randomf(50, 69), { randomf(), randomf(), randomf(), 1 }),
-			{0, 0}, randomf(1, 10)
+			velocity, randomf(1, 10)
 		);
 
-		body->damping = 1.0f;
-		body->hasGravity = false;
+		body->damping = 0.3f;
+		//body->hasGravity = false;
+		//body->lifetime = randomf(2, 4);
 
 		m_world->AddBody(body);
 	}
@@ -49,6 +52,16 @@ void CollisionTest::Initialize()
 
 	mouse->hasGravity = false;
 	mouse->damping = 0;
+	mouse->restitution = 2.0f;
 
 	m_world->AddBody(mouse);
+
+	auto ground = new Body(
+		m_graphics->ScreenToWorld({ m_width * 0.5f, m_height + 200 }),
+		new CircleShape(500, { 1, 1, 1, 1 }),
+		{0, 0}, randomf(1, 10), Body::Static
+	);
+	ground->hasGravity = false;
+
+	m_world->AddBody(ground);
 }

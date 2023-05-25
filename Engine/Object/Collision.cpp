@@ -24,7 +24,7 @@ namespace Collision
 
 		contact.normal = glm::normalize(dir);
 
-		contact.restitution = randomf(1, 2);
+		contact.restitution = (contact.b->restitution + contact.B->restitution) * 0.5f;
 
 		return contact;
 	}
@@ -68,6 +68,25 @@ namespace Collision
 
 			contact.b->position += (separation * contact.b->imass);
 			contact.B->position -= (separation * contact.B->imass);
+		}
+	}
+
+	void Resolve(std::vector<Contact>& contacts)
+	{
+		for (auto& contact : contacts)
+		{
+			glm::vec2 rv = contact.b->velocity - contact.B->velocity;
+			auto nv = glm::dot(rv, contact.normal);
+
+			if (nv > 0.0f) continue;
+
+			auto t_imass = contact.b->imass + contact.B->imass;
+			auto magnitude = -(1.0f + contact.restitution) * nv / t_imass;
+
+			glm::vec2 impulse = contact.normal * magnitude;
+
+			contact.b->velocity += (impulse * contact.b->imass);
+			contact.B->velocity -= (impulse * contact.B->imass);
 		}
 	}
 }

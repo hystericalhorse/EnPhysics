@@ -7,6 +7,9 @@
 #include "Emitters\DragEmitter.h"
 
 #define POINT_FORCE
+//#define AREA_FORCE
+//#define DRAG_FORCE
+//#define REVERSE_POINT_FORCE
 
 void ForceTest::Render()
 {
@@ -100,15 +103,6 @@ void ForceTest::Update()
 		body->hasGravity = false;
 	
 		m_world->AddBody(body);
-	}
-
-	for (auto& body : m_world->GetBodies())
-	{
-		if (body->lifetime < 0)
-		{
-			m_world->RemoveBody(body);
-			delete body;
-		}
 	}
 }
 

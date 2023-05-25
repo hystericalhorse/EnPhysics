@@ -28,6 +28,7 @@ void World::Step(float deltaTime, float timeScale)
 	std::vector<Contact> contacts;
 	Collision::CreateContacts(bodies, contacts);
 
+	Collision::Resolve(contacts);
 	Collision::Separate(contacts);
 }
 void World::Draw(class Graphics* graphics)

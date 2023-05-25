@@ -43,15 +43,6 @@ void ShapeTest::Update()
 
 		m_world->AddBody(body);
 	}
-
-	for (auto& body : m_world->GetBodies())
-	{
-		if (body->lifetime < 0)
-		{
-			m_world->RemoveBody(body);
-			delete body;
-		}
-	}
 }
 
 void ShapeTest::FixedUpdate()

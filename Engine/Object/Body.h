@@ -36,6 +36,7 @@ public:
 	float mass{ 1.0f };
 	float imass{ 1.0f }; // 1 / mass
 	float damping{ 0.0f };
+	float restitution{ 0.2f };
 
 	bool hasGravity{ true };
 	float gravityScale{ 1.0f };

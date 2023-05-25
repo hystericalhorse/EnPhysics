@@ -62,6 +62,24 @@ void Test::Update()
 
 	m_input->Update();
 	m_time->Update();
+
+	for (auto& body : m_world->GetBodies())
+	{
+		if (body->lifetime < 0)
+		{
+			m_world->RemoveBody(body);
+			for (auto& joint : m_world->GetJoints())
+			{
+				if (joint->IsAttached(body))
+				{
+					m_world->RemoveJoint(joint);
+					delete joint;
+				}
+			}
+
+			delete body;
+		}
+	}
 }
 
 void Test::UpdateEvents()

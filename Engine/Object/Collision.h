@@ -19,4 +19,5 @@ namespace Collision
 	Contact GetContact(Body* b, Body* B);
 
 	void Separate(std::vector<Contact>& contacts);
+	void Resolve(std::vector<Contact>& contacts);
 };

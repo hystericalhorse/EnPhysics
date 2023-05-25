@@ -10,6 +10,7 @@
 #define SPRING_LENGTH 50
 #define BODY_DAMPING 5
 
+//#define CHAIN
 #define GRID
 
 #define CHAIN_SIZE 4
@@ -200,29 +201,6 @@ void JointTest::Update()
 
 #endif
 	}
-
-	for (auto& body : m_world->GetBodies())
-	{
-		if (body == nullptr) continue;
-		if (body->lifetime < 0)
-		{
-			m_world->RemoveBody(body);
-
-			for (auto& joint : m_world->GetJoints())
-			{
-				if (joint->IsAttached(body))
-				{
-					m_world->RemoveJoint(joint);
-					joint = nullptr;
-					delete joint;
-				}
-			}
-
-			body = nullptr;
-			delete body;
-		}
-	}
-
 	
 }
 
